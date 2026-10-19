@@ -120,6 +120,8 @@ header.scrolled{border-color:var(--line)}
 .ba .layer{position:absolute;inset:0;display:grid;place-items:center}
 .ba .before{background:repeating-linear-gradient(135deg,#e9eef1 0 14px,#f2f6f8 14px 28px)}
 .ba .after{background:linear-gradient(135deg,#d6f3ef,#bfe9e3);clip-path:inset(0 0 0 var(--pos))}
+.ba .before{place-items:center start;padding-left:9%}
+.ba .after{place-items:center end;padding-right:9%}
 .ph-label{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:14px;text-align:center}
 .ph-label svg{width:34px;height:34px;opacity:.6}
 .ph-label b{font-family:Outfit;font-size:22px;color:var(--ink)}
@@ -219,7 +221,17 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 100px}
   .hero-cta .btn{flex:1}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stat b{font-size:36px}
-  .services,.steps{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr;gap:12px}
+  .svc{padding:18px 16px}
+  .svc .ic{width:44px;height:44px;font-size:20px;margin-bottom:12px}
+  .svc h3{font-size:18px}
+  .svc p{font-size:14px}
+  .svc .tag{position:static;display:inline-block;margin-bottom:10px;font-size:11px}
+  .steps{grid-template-columns:1fr;gap:12px}
+  .step{padding:20px;display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:start}
+  .step::before{grid-row:span 2;margin:0}
+  .step h3{font-size:19px}
+  .stat b sup{font-size:16px}
   .gallery{grid-template-columns:1fr 1fr;grid-template-rows:200px 150px 150px}
   .gallery .big{grid-column:span 2;grid-row:auto}
   .rv{width:280px}
