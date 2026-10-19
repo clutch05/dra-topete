@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<!--
+  DEMO · Dra. Topete · Apogeo Digital (19-oct-2026)
+  Real: nombre, giro (ortodoncia + odontología general) y su WhatsApp 322 192 8310.
+  De ejemplo: fotos, reseñas, cifras, dirección y horario (marcados con PERSONALIZAR).
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dra. Topete · Ortodoncia y Odontología General</title>
+<meta name="description" content="Brackets, alineadores y odontología general. Agenda tu valoración por WhatsApp.">
+<meta property="og:title" content="Dra. Topete · Ortodoncia y Odontología General">
+<meta property="og:description" content="Así se vería tu página. Agenda por WhatsApp en un clic.">
+<meta property="og:image" content="https://clutch05.github.io/dra-topete/img/sonrisa.png">
+<meta property="og:url" content="https://clutch05.github.io/dra-topete/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1b2a; --muted:#5b6b7a; --line:#e3ecef;
+  --brand:#0b7a83; --brand-2:#18b5a6; --brand-soft:#e7f6f4;
+  --gold:#f5a524; --bg:#fbfdfd; --card:#ffffff;
+  --r:22px; --wrap:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Outfit,sans-serif;line-height:1.05;letter-spacing:-.02em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--brand);background:var(--brand-soft);padding:6px 12px;border-radius:99px}
+.h2{font-size:clamp(30px,4.4vw,46px);font-weight:700;margin:14px 0 10px}
+.h2 b{color:var(--brand)}
+.lead{color:var(--muted);font-size:17px;max-width:520px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:16px;padding:16px 26px;border-radius:99px;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:#1fae5b;color:#fff;box-shadow:0 10px 24px -10px #1fae5b}
+.btn-wa:hover{box-shadow:0 16px 30px -12px #1fae5b}
+.btn-ghost{background:#fff;border:1px solid var(--line)}
+.btn svg{width:20px;height:20px}
+
+/* barra de demo */
+.demo-bar{background:var(--ink);color:#cfe3e6;font-size:13px;text-align:center;padding:8px 16px}
+.demo-bar b{color:#fff}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,253,253,.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-family:Outfit;font-weight:700;font-size:21px}
+.brand i{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:17px}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:15px;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.nav .btn{padding:11px 18px;font-size:14px}
+
+/* hero */
+.hero{padding:40px 0 64px;position:relative}
+.hero::before{content:"";position:absolute;inset:-120px -10% auto auto;width:620px;height:620px;background:radial-gradient(closest-side,#bfeee8,transparent);z-index:-1;filter:blur(10px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.rating-pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:7px 14px 7px 8px;border-radius:99px;font-size:14px;box-shadow:0 6px 18px -12px rgba(13,27,42,.3)}
+.avatars{display:flex}
+.avatars span{width:28px;height:28px;border-radius:50%;border:2px solid #fff;margin-left:-8px;display:grid;place-items:center;font-size:11px;font-weight:700;color:#fff}
+.avatars span:first-child{margin-left:0}
+.stars{color:var(--gold);letter-spacing:1px}
+.hero h1{font-size:clamp(42px,6.6vw,76px);font-weight:800;margin:22px 0 18px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:var(--muted);max-width:440px}
+.hero-cta{display:flex;gap:12px;margin:30px 0 26px;flex-wrap:wrap}
+.hero-checks{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.hero-checks span::before{content:"✓";color:var(--brand);font-weight:700;margin-right:6px}
+.hero-media{position:relative}
+.hero-photo{border-radius:32px;overflow:hidden;aspect-ratio:4/4.4;box-shadow:0 40px 80px -40px rgba(11,122,131,.55)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:zoom 1.6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.float{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;box-shadow:0 18px 40px -18px rgba(13,27,42,.35);display:flex;align-items:center;gap:12px;font-size:14px;animation:bob 5s ease-in-out infinite}
+.float b{display:block;font-family:Outfit;font-size:20px}
+.float small{color:var(--muted)}
+.float .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand);font-size:19px}
+.f1{left:-28px;top:14%}
+.f2{right:-18px;bottom:12%;animation-delay:-2.5s}
+.f3{left:8%;bottom:-22px;animation-delay:-1.2s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.live{width:9px;height:9px;border-radius:50%;background:#1fae5b;box-shadow:0 0 0 0 rgba(31,174,91,.6);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(31,174,91,0)}100%{box-shadow:0 0 0 0 rgba(31,174,91,0)}}
+
+/* tira */
+.strip{background:var(--ink);color:#fff;padding:18px 0;overflow:hidden}
+.strip-track{display:flex;gap:44px;width:max-content;animation:slide 28s linear infinite;font-family:Outfit;font-size:20px;font-weight:500}
+.strip-track span{display:flex;align-items:center;gap:44px;opacity:.9}
+.strip-track span::after{content:"✦";color:var(--brand-2)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* cifras */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-1px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px}
+.stat b{font-family:Outfit;font-size:44px;font-weight:700;display:block;line-height:1}
+.stat b sup{font-size:22px;color:var(--brand)}
+.stat span{color:var(--muted);font-size:14px}
+
+/* tratamientos */
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .25s,box-shadow .25s,border-color .25s;overflow:hidden}
+.svc:hover{transform:translateY(-5px);box-shadow:0 24px 44px -26px rgba(11,122,131,.45);border-color:#bfe6e1}
+.svc .ic{width:52px;height:52px;border-radius:16px;background:var(--brand-soft);display:grid;place-items:center;font-size:24px;margin-bottom:18px;transition:transform .3s}
+.svc:hover .ic{transform:rotate(-8deg) scale(1.08)}
+.svc h3{font-size:21px;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:15px}
+.svc .tag{position:absolute;top:18px;right:18px;font-size:12px;font-weight:600;background:#fff4e0;color:#a86400;padding:4px 10px;border-radius:99px}
+
+/* antes y después */
+.ba-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.ba{position:relative;aspect-ratio:4/3;border-radius:28px;overflow:hidden;--pos:50%;user-select:none;box-shadow:0 30px 60px -36px rgba(13,27,42,.5)}
+.ba .layer{position:absolute;inset:0;display:grid;place-items:center}
+.ba .before{background:repeating-linear-gradient(135deg,#e9eef1 0 14px,#f2f6f8 14px 28px)}
+.ba .after{background:linear-gradient(135deg,#d6f3ef,#bfe9e3);clip-path:inset(0 0 0 var(--pos))}
+.ph-label{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:14px;text-align:center}
+.ph-label svg{width:34px;height:34px;opacity:.6}
+.ph-label b{font-family:Outfit;font-size:22px;color:var(--ink)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.ba .handle::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:20px;color:var(--brand);box-shadow:0 8px 20px -6px rgba(0,0,0,.3)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.ba .chip{position:absolute;top:16px;background:rgba(13,27,42,.75);color:#fff;font-size:12px;font-weight:600;padding:5px 12px;border-radius:99px}
+.ba .chip.l{left:16px}.ba .chip.r{right:16px}
+
+/* reseñas */
+.reviews{background:linear-gradient(180deg,var(--brand-soft),var(--bg))}
+.g-badge{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 20px}
+.g-badge .g{font-family:Outfit;font-weight:800;font-size:28px;background:conic-gradient(#ea4335 0 25%,#fbbc05 0 50%,#34a853 0 75%,#4285f4 0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-badge b{font-family:Outfit;font-size:30px}
+.g-badge small{display:block;color:var(--muted);font-size:13px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);padding:6px 0}
+.track{display:flex;gap:16px;width:max-content;animation:slide 50s linear infinite}
+.track.rev{animation-direction:reverse;margin-top:16px}
+.marquee:hover .track{animation-play-state:paused}
+.rv{width:330px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
+.rv-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.rv-av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:15px}
+.rv-top b{display:block;font-size:15px}
+.rv-top small{color:var(--muted);font-size:12px}
+.rv p{font-size:15px}
+
+/* pasos */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Outfit;font-weight:700;font-size:15px;color:var(--brand);background:var(--brand-soft);padding:6px 12px;border-radius:99px;display:inline-block;margin-bottom:18px}
+.step h3{font-size:22px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+
+/* galería */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px}
+.gallery > *{border-radius:22px;overflow:hidden}
+.gallery .big{grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery > *:hover img{transform:scale(1.05)}
+.ph{background:repeating-linear-gradient(135deg,#eef3f5 0 14px,#f6f9fa 14px 28px);border:1.5px dashed #c9d8dd;display:grid;place-items:center}
+
+/* ubicación */
+.loc{display:grid;grid-template-columns:1fr 1.2fr;gap:16px}
+.loc-card{background:var(--ink);color:#fff;border-radius:28px;padding:34px}
+.loc-card h2{font-size:34px;margin-bottom:22px}
+.loc-row{display:flex;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.12)}
+.loc-row .ic{font-size:20px}
+.loc-row small{display:block;color:#9fb6bd;font-size:13px}
+.ph-tag{display:inline-block;font-size:11px;background:rgba(255,255,255,.12);padding:2px 8px;border-radius:99px;margin-left:6px;color:#cfe3e6}
+.map{border-radius:28px;min-height:340px;position:relative;overflow:hidden;background:
+  linear-gradient(90deg,rgba(255,255,255,.7) 2px,transparent 2px) 0 0/64px 64px,
+  linear-gradient(rgba(255,255,255,.7) 2px,transparent 2px) 0 0/64px 64px,#dcefeb}
+.map::before{content:"";position:absolute;left:-10%;right:-10%;top:58%;height:26px;background:#fff;transform:rotate(-8deg)}
+.map::after{content:"";position:absolute;top:-10%;bottom:-10%;left:38%;width:20px;background:#fff;transform:rotate(12deg)}
+.pin{position:absolute;left:50%;top:45%;transform:translate(-50%,-100%);z-index:2;display:flex;flex-direction:column;align-items:center}
+.pin span{background:var(--ink);color:#fff;font-weight:600;font-size:14px;padding:8px 14px;border-radius:12px;white-space:nowrap}
+.pin i{width:22px;height:22px;border-radius:50% 50% 50% 0;background:var(--brand);transform:rotate(-45deg);margin-top:8px;border:4px solid #fff;box-shadow:0 6px 14px rgba(0,0,0,.25);animation:drop 1.4s ease-in-out infinite alternate}
+@keyframes drop{to{transform:rotate(-45deg) translate(3px,-3px)}}
+
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 24px;margin-bottom:12px}
+summary{font-family:Outfit;font-weight:600;font-size:18px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--brand);font-size:24px;line-height:1;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:10px}
+
+/* cta final */
+.final{margin:0 20px 40px;border-radius:36px;background:linear-gradient(135deg,var(--brand),#0a5960);color:#fff;text-align:center;padding:72px 24px;position:relative;overflow:hidden}
+.final::before,.final::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07)}
+.final::before{width:380px;height:380px;left:-120px;top:-160px}
+.final::after{width:300px;height:300px;right:-80px;bottom:-140px}
+.final h2{font-size:clamp(34px,5vw,56px);margin-bottom:12px;position:relative}
+.final p{opacity:.85;font-size:18px;margin-bottom:28px;position:relative}
+.final .btn{position:relative}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 100px}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:#1fae5b;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(31,174,91,.8);animation:ping 2.4s infinite}
+.wa-float svg{width:30px;height:30px}
+
+/* animación al bajar */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+@media (max-width:900px){
+  section{padding:56px 0}
+  .nav ul{display:none}
+  .hero{padding:22px 0 48px}
+  .hero-grid,.ba-grid,.loc{grid-template-columns:1fr;gap:34px}
+  .hero-media{order:-1}
+  .hero-photo{aspect-ratio:1/1;border-radius:26px}
+  .f1{left:-6px;top:auto;bottom:18%}
+  .f2{right:-6px;bottom:auto;top:8%}
+  .f3{display:none}
+  .hero-cta .btn{flex:1}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat b{font-size:36px}
+  .services,.steps{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:200px 150px 150px}
+  .gallery .big{grid-column:span 2;grid-row:auto}
+  .rv{width:280px}
+  .final{margin:0 12px 32px;padding:56px 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">Vista previa para <b>Dra. Topete</b> · las fotos, reseñas y cifras son de ejemplo</div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#" class="brand"><i>T</i>Dra. Topete</a>
+    <ul>
+      <li><a href="#tratamientos">Tratamientos</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+    <a class="btn btn-wa" href="https://wa.me/523221928310?text=Hola,%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Agendar</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="rating-pill reveal">
+        <div class="avatars">
+          <span style="background:#0b7a83">M</span><span style="background:#f08a5d">L</span><span style="background:#6c63ff">J</span>
+        </div>
+        <span class="stars">★★★★★</span> <b>4.9</b> · 120 reseñas en Google
+      </div>
+      <h1 class="reveal d1">Una sonrisa<br>que te <em>encanta</em><br>enseñar.</h1>
+      <p class="reveal d2">Brackets, alineadores y todo para tus dientes, en un solo lugar.</p>
+      <div class="hero-cta reveal d3">
+        <a class="btn btn-wa" href="https://wa.me/523221928310?text=Hola,%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
+          Agenda por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#tratamientos">Ver tratamientos</a>
+      </div>
+      <div class="hero-checks reveal d4"><span>Valoración sin compromiso</span><span>Pagos a meses</span><span>Citas esta semana</span></div>
+    </div>
+
+    <div class="hero-media reveal d2">
+      <!-- PERSONALIZAR: foto real de la doctora o del consultorio -->
+      <div class="hero-photo"><img src="img/sonrisa.png" alt="Paciente sonriendo con brackets"></div>
+      <div class="float f1"><span class="ic">🦷</span><div><b>+500</b><small>sonrisas listas</small></div></div>
+      <div class="float f2"><span class="live"></span><div><b style="font-size:15px">Hoy hay lugar</b><small>respuesta en minutos</small></div></div>
+      <div class="float f3"><span class="stars">★★★★★</span><div><small>«Me explicaron todo»</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>Brackets</span><span>Alineadores</span><span>Limpieza</span><span>Resinas</span><span>Endodoncia</span><span>Blanqueamiento</span><span>Extracciones</span><span>Coronas</span>
+    <span>Brackets</span><span>Alineadores</span><span>Limpieza</span><span>Resinas</span><span>Endodoncia</span><span>Blanqueamiento</span><span>Extracciones</span><span>Coronas</span>
+  </div>
+</div>
+
+<!-- ===== CIFRAS ===== -->
+<section style="padding-top:48px;padding-bottom:0">
+  <div class="wrap stats">
+    <!-- PERSONALIZAR: cifras reales -->
+    <div class="stat reveal"><b><span data-count="500">0</span><sup>+</sup></b><span>pacientes atendidos</span></div>
+    <div class="stat reveal d1"><b><span data-count="10">0</span><sup>años</sup></b><span>de experiencia</span></div>
+    <div class="stat reveal d2"><b>4.<span data-count="9">0</span><sup>★</sup></b><span>en Google</span></div>
+    <div class="stat reveal d3"><b><span data-count="12">0</span><sup>MSI</sup></b><span>en tratamientos</span></div>
+  </div>
+</section>
+
+<!-- ===== TRATAMIENTOS ===== -->
+<section id="tratamientos">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow reveal">Tratamientos</span>
+        <h2 class="h2 reveal d1">Todo para tu boca, <b>aquí mismo</b></h2>
+      </div>
+      <p class="lead reveal d2">Te revisamos, te decimos qué necesitas y cuánto cuesta. Sin sorpresas.</p>
+    </div>
+    <div class="services">
+      <div class="svc reveal"><span class="tag">El más pedido</span><div class="ic">😁</div><h3>Brackets</h3><p>Metálicos o estéticos. Tú eliges.</p></div>
+      <div class="svc reveal d1"><div class="ic">✨</div><h3>Alineadores</h3><p>Transparentes. Casi nadie lo nota.</p></div>
+      <div class="svc reveal d2"><div class="ic">🪥</div><h3>Limpieza</h3><p>En una cita y sin dolor.</p></div>
+      <div class="svc reveal"><div class="ic">🦷</div><h3>Resinas</h3><p>Del color de tu diente.</p></div>
+      <div class="svc reveal d1"><div class="ic">🩺</div><h3>Endodoncia</h3><p>Salvamos tu diente.</p></div>
+      <div class="svc reveal d2"><div class="ic">💎</div><h3>Blanqueamiento</h3><p>Varios tonos más blanco.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ANTES Y DESPUÉS ===== -->
+<section id="casos" style="padding-top:0">
+  <div class="wrap ba-grid">
+    <div>
+      <span class="eyebrow reveal">Casos reales</span>
+      <h2 class="h2 reveal d1">Mira el <b>antes y el después</b></h2>
+      <p class="lead reveal d2">Desliza la barra. Aquí van las fotos de tus pacientes.</p>
+    </div>
+    <!-- PERSONALIZAR: fotos reales de antes y después -->
+    <div class="ba reveal d2" id="ba">
+      <div class="layer before"><div class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><b>Antes</b>Foto de tu paciente</div></div>
+      <div class="layer after"><div class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><b>Después</b>Su sonrisa nueva</div></div>
+      <span class="chip l">Antes</span><span class="chip r">Después</span>
+      <div class="handle"></div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESEÑAS ===== -->
+<section id="resenas" class="reviews">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow reveal">Reseñas</span>
+        <h2 class="h2 reveal d1">Lo dicen <b>nuestros pacientes</b></h2>
+      </div>
+      <div class="g-badge reveal d2"><span class="g">G</span><div><b>4.9</b> <span class="stars">★★★★★</span><small>120 reseñas en Google</small></div></div>
+    </div>
+  </div>
+  <!-- PERSONALIZAR: reseñas reales de su Google -->
+  <div class="marquee">
+    <div class="track" id="t1"></div>
+    <div class="track rev" id="t2"></div>
+  </div>
+</section>
+
+<!-- ===== PASOS ===== -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow reveal">Así de fácil</span>
+        <h2 class="h2 reveal d1">Tu cita en <b>3 pasos</b></h2>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Escríbenos</h3><p>Por WhatsApp. Te contestamos rápido.</p></div>
+      <div class="step reveal d1"><h3>Ven a tu valoración</h3><p>Te revisamos y te damos tu plan.</p></div>
+      <div class="step reveal d2"><h3>Empieza</h3><p>Con pagos que sí te acomodan.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERÍA ===== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow reveal">El consultorio</span>
+        <h2 class="h2 reveal d1">Conócenos <b>antes de venir</b></h2>
+      </div>
+    </div>
+    <!-- PERSONALIZAR: fotos del consultorio, la recepción y el equipo -->
+    <div class="gallery">
+      <div class="big reveal"><img src="img/atencion.jpg" alt="Paciente en consulta"></div>
+      <div class="ph reveal d1"><div class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Tu consultorio</div></div>
+      <div class="ph reveal d2"><div class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Tu recepción</div></div>
+      <div class="ph reveal d3" style="grid-column:span 2"><div class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Foto de la doctora y su equipo</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UBICACIÓN ===== -->
+<section id="ubicacion" style="padding-top:0">
+  <div class="wrap loc">
+    <div class="loc-card reveal">
+      <h2>Ven a vernos</h2>
+      <!-- PERSONALIZAR: dirección y horario reales -->
+      <div class="loc-row"><span class="ic">📍</span><div><b>Tu dirección aquí <span class="ph-tag">ejemplo</span></b><small>Calle, número y colonia</small></div></div>
+      <div class="loc-row"><span class="ic">🕘</span><div><b>Lun a Vie 9:00 – 19:00 <span class="ph-tag">ejemplo</span></b><small>Sábado 9:00 – 14:00</small></div></div>
+      <div class="loc-row"><span class="ic">💬</span><div><b>322 192 8310</b><small>WhatsApp y llamadas</small></div></div>
+      <a class="btn btn-wa" style="margin-top:18px;width:100%" href="https://wa.me/523221928310?text=Hola,%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Agenda por WhatsApp</a>
+    </div>
+    <div class="map reveal d1"><div class="pin"><span>Dra. Topete</span><i></i></div></div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head" style="justify-content:center;text-align:center"><div><span class="eyebrow reveal">Dudas</span><h2 class="h2 reveal d1">Lo que más nos <b>preguntan</b></h2></div></div>
+    <div class="faq">
+      <details class="reveal"><summary>¿Cuánto cuesta la valoración?</summary><p>Escríbenos y te decimos el precio de hoy. En la valoración te damos tu plan completo.</p></details>
+      <details class="reveal d1"><summary>¿Puedo pagar a meses?</summary><p>Sí. Tenemos pagos a meses con tarjeta en brackets y alineadores.</p></details>
+      <details class="reveal d2"><summary>¿Atienden niños?</summary><p>Sí, desde la primera visita al dentista.</p></details>
+      <details class="reveal d3"><summary>¿Duele ponerse brackets?</summary><p>No. Puede que sientas presión los primeros días, nada más.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="final reveal">
+  <h2>¿Lista para tu sonrisa nueva?</h2>
+  <p>Escríbenos y agenda tu valoración.</p>
+  <a class="btn btn-wa" href="https://wa.me/523221928310?text=Hola,%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Agenda por WhatsApp</a>
+</div>
+
+<footer>© 2026 Dra. Topete · Ortodoncia y Odontología General</footer>
+
+<a class="wa-float" href="https://wa.me/523221928310?text=Hola,%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
+</a>
+
+<script>
+// reseñas de ejemplo (PERSONALIZAR con las reales de su Google)
+const R=[
+ ["Mariana G.","hace 2 semanas","Me pusieron brackets y la doctora me explicó todo. Súper paciente.","#0b7a83"],
+ ["Luis R.","hace 1 mes","Fui por una limpieza y salí sin dolor. Ya agendé a mi esposa.","#f08a5d"],
+ ["Jessica P.","hace 3 semanas","Mi hija les tenía miedo a los dentistas y aquí salió feliz.","#6c63ff"],
+ ["Carlos M.","hace 2 meses","Puntuales y muy limpios. Me dieron el precio desde el principio.","#e05780"],
+ ["Andrea V.","hace 1 semana","Los alineadores casi no se notan. Ya llevo 6 meses y voy muy bien.","#2a9d8f"],
+ ["Roberto S.","hace 1 mes","Me salvaron una muela que otro dentista quería sacar.","#e9a23b"],
+ ["Fernanda L.","hace 5 días","Agendé por WhatsApp y me atendieron al otro día.","#3a86ff"],
+ ["Diana C.","hace 2 meses","Mi blanqueamiento quedó natural, nada exagerado. Feliz.","#8f5cc2"]
+];
+const card=([n,t,x,c])=>`<div class="rv"><div class="rv-top"><div class="rv-av" style="background:${c}">${n[0]}</div><div><b>${n}</b><small>${t}</small></div><span class="stars" style="margin-left:auto">★★★★★</span></div><p>${x}</p></div>`;
+const a=R.slice(0,4).map(card).join(''), b=R.slice(4).map(card).join('');
+document.getElementById('t1').innerHTML=a+a+a+a;
+document.getElementById('t2').innerHTML=b+b+b+b;
+
+// aparecer al bajar + contadores
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('[data-count]').forEach(el=>{
+    const to=+el.dataset.count,t0=performance.now();
+    const step=now=>{const p=Math.min((now-t0)/1200,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
+    requestAnimationFrame(step);
+  });
+  io.unobserve(e.target);
+}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// antes / después
+const ba=document.getElementById('ba');
+ba.querySelector('input').addEventListener('input',e=>ba.style.setProperty('--pos',e.target.value+'%'));
+
+// borde del header al bajar
+const h=document.getElementById('top');
+addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>10),{passive:true});
+</script>
+</body>
+</html>
